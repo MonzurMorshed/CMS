@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
+<html lang="en">
+<head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Home</title>
+        <title>CMS</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -20,40 +20,49 @@
         @endif
         @livewireStyles
     </head>
-    <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
-        <header class="w-full lg:max-w-4xl max-w-[335px] text-sm mb-6 not-has-[nav]:hidden">
-            @if (Route::has('login'))
-                <nav class="flex items-center justify-end gap-4">
-                    @auth
-                        <a
-                            href="{{ url('/dashboard') }}"
-                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal"
-                        >
-                            Dashboard
-                        </a>
-                    @else
-                        <a
-                            href="{{ route('login') }}"
-                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] text-[#1b1b18] border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm text-sm leading-normal"
-                        >
-                            Log in
-                        </a>
+<body class="flex flex-col min-h-screen">
 
-                        @if (Route::has('register'))
-                            <a
-                                href="{{ route('register') }}"
-                                class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
-                                Register
-                            </a>
-                        @endif
-                    @endauth
-                </nav>
-            @endif
-        </header>
+    {{-- Header --}}
+    <header class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-lg font-bold">My Dashboard</h1>
+            {{-- <a href="{{ route('logout') }}"
+               onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+               class="text-sm text-gray-300 hover:text-white">
+                Logout
+            </a> --}}
+            {{--
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+                <livewire:logout-button />
+            </form>
+            --}}
+            <livewire:auth.logout-button />
+        </div>
+    </header>
 
-        @if (Route::has('login'))
-            <div class="h-14.5 hidden lg:block"></div>
-        @endif
-        @livewireScripts
-    </body>
+    <div class="flex flex-1">
+        {{-- Sidebar --}}
+        <aside class="w-64 bg-gray-100 p-4 border-r">
+            <nav>
+                <ul>
+                    <li><a href="/dashboard" class="block p-2 hover:bg-gray-200">Home</a></li>
+                    <li><a href="/profile" class="block p-2 hover:bg-gray-200">Profile</a></li>
+                    <li><a href="/settings" class="block p-2 hover:bg-gray-200">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        {{-- Main Content --}}
+        <main class="flex-1 p-6">
+            {{ $slot }}
+        </main>
+    </div>
+
+    {{-- Footer --}}
+    <footer class="bg-gray-800 text-white text-center p-4">
+        &copy; {{ date('Y') }} My App. All rights reserved.
+    </footer>
+
+    @livewireScripts
+</body>
 </html>
