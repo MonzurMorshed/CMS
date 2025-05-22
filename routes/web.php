@@ -17,6 +17,9 @@ Route::apiResource('ourteam', OurTeamController::class);
 Route::get('/',function(){
     return view('frontend.landing');
 });
+Route::get('/about',function(){
+    return view('frontend.aboutus');
+});
 Route::get('/ourteam',function(){
     return view('frontend.ourteam');
 });
