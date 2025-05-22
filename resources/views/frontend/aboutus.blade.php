@@ -30,11 +30,14 @@
          </div>
 
         @include('frontend.components.event_planning_success')
-        @include('frontend.components.event_services')
 
-         <div class="elementor-element elementor-element-7a697e1d e-flex e-con-boxed e-con e-parent" data-id="7a697e1d" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div style="margin:80px 0px">
+            @include('frontend.components.event_services')
+        </div>
+
+         <div class="elementor-element elementor-element-ab8c470 e-flex e-con-boxed e-con e-parent" data-id="ab8c470" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
             <div class="e-con-inner">
-               <div class="elementor-element elementor-element-79e2aced elementor-widget elementor-widget-heading" data-id="79e2aced" data-element_type="widget" data-widget_type="heading.default">
+               <div class="elementor-element elementor-element-6a00793  elementor-widget elementor-widget-heading" data-id="6a00793 " data-element_type="widget" data-widget_type="heading.default">
                   <div class="elementor-widget-container">
                      <h4 class="elementor-heading-title elementor-size-default">Corporate Clients</h4>
                   </div>
@@ -237,7 +240,7 @@
                                  <div class="elementor-widget-container">
                                     <div class="ekit-wid-con">
                                        <div class="profile-image-card elementor-animation- ekit-team-img ekit-team-style-overlay text-center">
-                                          <img decoding="async" src="../../wp-content/uploads/sites/2/elementor/thumbs/tv-presenter-in-formal-wear-makes-music-gesture-at-event-qkr6z58bt6mqp7w4h67nwllyacx7ajko15nqeu7a68.jpg" title="TV presenter in formal wear makes music gesture at event" alt="TV presenter in formal wear makes music gesture at event" loading="lazy" />
+                                          <img decoding="async" src="{{ asset('assets/uploads/sites/2/elementor/thumbs/tv-presenter-in-formal-wear-makes-music-gesture-at-event-qkr6z58bt6mqp7w4h67nwllyacx7ajko15nqeu7a68.jpg') }}" title="TV presenter in formal wear makes music gesture at event" alt="TV presenter in formal wear makes music gesture at event" loading="lazy" />
                                           <div class="hover-area">
                                              <div class="profile-body">
                                                 <h2 class="profile-title">
@@ -287,7 +290,7 @@
                                  <div class="elementor-widget-container">
                                     <div class="ekit-wid-con">
                                        <div class="profile-image-card elementor-animation- ekit-team-img ekit-team-style-overlay text-center">
-                                          <img decoding="async" src="../../wp-content/uploads/sites/2/elementor/thumbs/smiling-event-organizer-with-clipboard-talking-on-smartphone-near-festive-tables-in-banquet-hall-qkr6yxpmaicg4c71p2yncni9j9y9kyqtc4fukmifk0.56.delay" title="smiling event organizer with clipboard talking on smartphone near festive tables in banquet hall" alt="smiling event organizer with clipboard talking on smartphone near festive tables in banquet hall" loading="lazy" />
+                                          <img decoding="async" src="{{ asset('assets/uploads/sites/2/elementor/thumbs/smiling-event-organizer-with-clipboard-talking-on-smartphone-near-festive-tables-in-banquet-hall-qkr6yxpmaicg4c71p2yncni9j9y9kyqtc4fukmifk0.56.delay')}}" title="smiling event organizer with clipboard talking on smartphone near festive tables in banquet hall" alt="smiling event organizer with clipboard talking on smartphone near festive tables in banquet hall" loading="lazy" />
                                           <div class="hover-area">
                                              <div class="profile-body">
                                                 <h2 class="profile-title">
@@ -339,7 +342,7 @@
                            <div class="elementor-widget-container">
                               <div class="ekit-wid-con">
                                  <div class="profile-image-card elementor-animation- ekit-team-img ekit-team-style-overlay text-center">
-                                    <img decoding="async" src="../../wp-content/uploads/sites/2/elementor/thumbs/portrait-of-mature-business-woman-small-business-owner-organizing-events-parties-weddings-qkr6zm5f879wi77jqdiy5hc8zalt53fu3heh1ti728.jpg" title="Portrait of mature business woman small business owner organizing events, parties, weddings" alt="Portrait of mature business woman small business owner organizing events, parties, weddings" loading="lazy" />
+                                    <img decoding="async" src="{{ asset('assets/uploads/sites/2/elementor/thumbs/portrait-of-mature-business-woman-small-business-owner-organizing-events-parties-weddings-qkr6zm5f879wi77jqdiy5hc8zalt53fu3heh1ti728.jpg')}}" title="Portrait of mature business woman small business owner organizing events, parties, weddings" alt="Portrait of mature business woman small business owner organizing events, parties, weddings" loading="lazy" />
                                     <div class="hover-area">
                                        <div class="profile-body">
                                           <h2 class="profile-title">

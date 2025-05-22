@@ -132,7 +132,7 @@
     </script>
     <link rel='stylesheet' id='elementor-frontend-css' href='{{ asset('assets/css/frontend.min1c88.css') }}'
         media='all' />
-    <link rel='stylesheet' id='elementor-frontend-css' href='{{ asset('assets/css/custom.css') }}'
+    <link rel='stylesheet' href='{{ asset('assets/css/custom.css') }}'
         media='all' />
     <link rel='stylesheet' id='elementor-post-377-css' href='{{ asset('assets/css/post-css/post-3778c60.css') }}'
         media='all' />
