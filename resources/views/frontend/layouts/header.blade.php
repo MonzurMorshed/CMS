@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home &#8211; Events Organizer</title>
+    <title>Home &#8211; Event Management</title>
     <meta name='robots' content='max-image-preview:large' />
     <style>
         img:is([sizes="auto" i],
@@ -638,17 +638,6 @@
     <script src="assets/js/jquery-migrate.min5589.js" id="jquery-migrate-js"></script>
     <script src="assets/js/template-kit-export-public982a.js " id="template-kit-export-js"></script>
     <link rel="https://api.w.org/" href="https://gajean.com/tkit/eveno/wp-json/" />
-    <link rel="EditURI" type="application/rsd+xml" title="RSD"
-        href="https://gajean.com/tkit/eveno/xmlrpc.php?rsd" />
-    <meta name="generator" content="WordPress 6.7.2" />
-    <link rel="canonical" href="index.html" />
-    <link rel='shortlink' href='https://gajean.com/tkit/eveno/?p=60' />
-    <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"
-        href="https://gajean.com/tkit/eveno/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgajean.com%2Ftkit%2Feveno%2Ftemplate-kit%2Fhome%2F" />
-    <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"
-        href="https://gajean.com/tkit/eveno/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgajean.com%2Ftkit%2Feveno%2Ftemplate-kit%2Fhome%2F&amp;format=xml" />
-    <meta name="generator"
-        content="Elementor 3.26.4; features: e_font_icon_svg, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
     <style>
         .e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
         .e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
@@ -802,51 +791,48 @@
                                                 class="elementskit-navbar-nav elementskit-menu-po-center submenu-click-on-icon">
                                                 <li id="menu-item-73"
                                                     class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-73 nav-item elementskit-mobile-builder-content active"
-                                                    data-vertical-menu=750px><a href="/"
+                                                    data-vertical-menu=750px><a href="{{url('/')}}"
                                                         class="ekit-menu-nav-link active">Home</a></li>
                                                 <li id="menu-item-74"
                                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-74 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
                                                     data-vertical-menu=750px><a href="#"
-                                                        class="ekit-menu-nav-link ekit-menu-dropdown-toggle">About<i
-                                                            aria-hidden="true"
-                                                            class="icon icon-plus elementskit-submenu-indicator"></i></a>
+                                                        class="ekit-menu-nav-link ekit-menu-dropdown-toggle">About
+                                                        <svg style="margin-left:10px; margin-bottom: 2px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-plus-icon lucide-circle-plus"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg></a>
                                                     <ul class="elementskit-dropdown elementskit-submenu-panel">
                                                         <li id="menu-item-75"
                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75 nav-item elementskit-mobile-builder-content"
-                                                            data-vertical-menu=750px><a href="../about-us"
+                                                            data-vertical-menu=750px><a href="{{url('/about')}}"
                                                                 class=" dropdown-item">About Us</a>
                                                         <li id="menu-item-76"
                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-76 nav-item elementskit-mobile-builder-content"
-                                                            data-vertical-menu=750px><a href="#"
+                                                            data-vertical-menu=750px><a href="{{url('/ourteam')}}"
                                                                 class=" dropdown-item">Our Team</a>
                                                     </ul>
                                                 </li>
                                                 <li id="menu-item-77"
                                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-77 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
-                                                    data-vertical-menu=750px><a href="#"
-                                                        class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Services<i
-                                                            aria-hidden="true"
-                                                            class="icon icon-plus elementskit-submenu-indicator"></i></a>
-                                                    <!-- <ul class="elementskit-dropdown elementskit-submenu-panel">
- <li id="menu-item-78" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-78 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="../our-services/index.html" class=" dropdown-item">Our Services</a>
-  <li id="menu-item-79" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-79 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="../detail-service/index.html" class=" dropdown-item">Detail Service</a>	<li id="menu-item-80" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="../our-pricing/index.html" class=" dropdown-item">Our Pricing</a></ul> -->
-                                                </li>
+                                                    data-vertical-menu=750px><a href="/services"
+                                                        class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Services<svg style="margin-left:10px; margin-bottom: 2px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-plus-icon lucide-circle-plus"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg></a></a>
+                                                    <ul class="elementskit-dropdown elementskit-submenu-panel">
+ <li id="menu-item-78" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-78 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="{{url('/services')}}" class=" dropdown-item">Our Services</a>
+  <li id="menu-item-79" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-79 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="../detail-service" class=" dropdown-item">Detail Service</a>
+   {{-- <li id="menu-item-80" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="../our-pricing/index.html" class=" dropdown-item">Our Pricing</a></ul> --}}
+   </ul>
                                                 <li id="menu-item-81"
                                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-81 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
                                                     data-vertical-menu=750px><a href="#"
-                                                        class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Projects<i
-                                                            aria-hidden="true"
-                                                            class="icon icon-plus elementskit-submenu-indicator"></i></a>
-                                                    <!-- <ul class="elementskit-dropdown elementskit-submenu-panel">
- <li id="menu-item-89" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-89 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="../our-projects/index.html" class=" dropdown-item">Our Projects</a>	<li id="menu-item-82" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="../detail-project/index.html" class=" dropdown-item">Detail Project</a></ul> -->
+                                                        class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Projects<svg style="margin-left:10px; margin-bottom: 2px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-plus-icon lucide-circle-plus"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg></a></a>
+                                                    <ul class="elementskit-dropdown elementskit-submenu-panel">
+ <li id="menu-item-89" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-89 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="{{url('/projects')}}" class=" dropdown-item">Our Projects</a>
+    <li id="menu-item-82" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="../detail-project/index.html" class=" dropdown-item">Detail Project</a></ul>
                                                 </li>
-                                                <!--<li id="menu-item-83" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-83 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu=750px><a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Pages<i aria-hidden="true" class="icon icon-plus elementskit-submenu-indicator"></i></a>
+                                                {{-- <li id="menu-item-83" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-83 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu=750px><a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Pages<i aria-hidden="true" class="icon icon-plus elementskit-submenu-indicator"></i></a>
 <ul class="elementskit-dropdown elementskit-submenu-panel">
  <li id="menu-item-84" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-84 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="../contact-us/index.html" class=" dropdown-item">Contact Us</a>	<li id="menu-item-85" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-85 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="../faqs/index.html" class=" dropdown-item">FAQs</a>	<li id="menu-item-740" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-740 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="../reviews/index.html" class=" dropdown-item">Reviews</a>	<li id="menu-item-86" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-86 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="../404/index.html" class=" dropdown-item">404</a>	<li id="menu-item-87" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="../our-blog/index.html" class=" dropdown-item">Our Blog</a>	<li id="menu-item-88" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-88 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="../single-blog/index.html" class=" dropdown-item">Single Blog</a></ul>
-</li>-->
+</li> --}}
                                             </ul>
                                             <div class="elementskit-nav-identity-panel"><a
-                                                    class="elementskit-nav-logo" href="https://gajean.com/tkit/eveno"
+                                                    class="elementskit-nav-logo" href="#"
                                                     target="" rel=""><img
                                                         src="assets/asset-contents/uploads/sites/2/2024/02/Eveno-Light.png"
                                                         title="Eveno Light" alt="Eveno Light"
@@ -863,6 +849,7 @@
                         </div>
                         <div class="elementor-element elementor-element-aa6c367 e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-child"
                             data-id="aa6c367" data-element_type="container">
+                            {{--
                             <div class="elementor-element elementor-element-8825bc3 elementor-widget__width-auto elementor-tablet-align-justify elementor-widget-tablet__width-inherit elementor-widget elementor-widget-button"
                                 data-id="8825bc3" data-element_type="widget" data-widget_type="button.default">
                                 <div class="elementor-widget-container">
@@ -876,6 +863,7 @@
                                     </div>
                                 </div>
                             </div>
+                            --}}
                             <div class="elementor-element elementor-element-1315026 elementor-widget__width-auto elementor-hidden-tablet elementor-hidden-mobile ekit-off-canvas-position-right elementor-widget elementor-widget-elementskit-header-offcanvas"
                                 data-id="1315026" data-element_type="widget"
                                 data-widget_type="elementskit-header-offcanvas.default">
@@ -883,8 +871,7 @@
                                     <div class="ekit-wid-con">
                                         <div class="ekit-offcanvas-toggle-wraper before">
                                             <a href="#" class="ekit_navSidebar-button ekit_offcanvas-sidebar"
-                                                aria-label="offcanvas-menu">
-                                                <i aria-hidden="true" class="icon icon-menu-11"></i> </a>
+                                                aria-label="offcanvas-menu"><svg style="margin-top: 2px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 12h16"/><path d="M4 18h16"/><path d="M4 6h16"/></svg> </a>
                                         </div>
                                         <!-- offset cart strart -->
                                         <!-- sidebar cart item -->

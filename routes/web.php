@@ -23,6 +23,15 @@ Route::get('/about',function(){
 Route::get('/ourteam',function(){
     return view('frontend.ourteam');
 });
+Route::get('/services',function(){
+    return view('frontend.services');
+});
+Route::get('/services-details',function(){
+    return view('frontend.services-details');
+});
+Route::get('/projects',function(){
+    return view('frontend.projects');
+});
 
 // {model}
 Route::group(['prefix' => 'cms-admin/{model}','middleware' => 'auth'], function () {
