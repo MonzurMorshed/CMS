@@ -34,8 +34,8 @@ Route::get('/projects',function(){
 });
 
 // {model}
+Route::get('cms-admin/{model}/index', [CommonController::class,'index']);
 Route::group(['prefix' => 'cms-admin/{model}','middleware' => 'auth'], function () {
-    Route::get('/index', [CommonController::class,'index']);
     Route::get('/create', [CommonController::class,'create']);
     Route::get('/store', [CommonController::class,'store']);
     Route::get('/show/{id}', [CommonController::class,'show']);

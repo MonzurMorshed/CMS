@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Repositories\Interface\OurTeamRepositoryInterface;
+use App\Repositories\Interface\CommonRepositoryInterface;
+use App\Repositories\CommonRepository;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -12,7 +14,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-            $this->app->bind(OurTeamRepositoryInterface::class, OurTeamRepository::class);
+            $this->app->bind(CommonRepositoryInterface::class, CommonRepository::class);
+             $this->app->bind(OurTeamRepositoryInterface::class, OurTeamRepository::class);
     }
 
     /**
