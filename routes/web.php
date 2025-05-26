@@ -35,10 +35,11 @@ Route::get('/projects',function(){
 
 // {model}
 Route::get('cms-admin/{model}/index', [CommonController::class,'index']);
-Route::group(['prefix' => 'cms-admin/{model}','middleware' => 'auth'], function () {
+// Route::group(['prefix' => 'cms-admin/{model}','middleware' => 'auth'], function () {
+Route::group(['prefix' => 'cms-admin/{model}'], function () {
     Route::get('/create', [CommonController::class,'create']);
-    Route::get('/store', [CommonController::class,'store']);
+    Route::post('/store', [CommonController::class,'store']);
     Route::get('/show/{id}', [CommonController::class,'show']);
-    Route::get('/update/{id}', [CommonController::class,'update']);
-    Route::get('/delete/{id}', [CommonController::class,'delete']);
+    Route::post('/update/{id}', [CommonController::class,'update']);
+    Route::DELETE('/delete/{id}', [CommonController::class,'delete']);
 });
