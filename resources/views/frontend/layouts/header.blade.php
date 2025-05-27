@@ -55,7 +55,7 @@
                             n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e,
                                 "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
                                 "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"
-                                );
+                            );
                     case "emoji":
                         return !n(e, "\ud83d\udc26\u200d\u2b1b", "\ud83d\udc26\u200b\u2b1b")
                 }
@@ -132,8 +132,7 @@
     </script>
     <link rel='stylesheet' id='elementor-frontend-css' href='{{ asset('assets/css/frontend.min1c88.css') }}'
         media='all' />
-    <link rel='stylesheet' href='{{ asset('assets/css/custom.css') }}'
-        media='all' />
+    <link rel='stylesheet' href='{{ asset('assets/css/custom.css') }}' media='all' />
     <link rel='stylesheet' id='elementor-post-377-css' href='{{ asset('assets/css/post-css/post-3778c60.css') }}'
         media='all' />
     <link rel='stylesheet' id='elementor-post-381-css' href='{{ asset('assets/css/post-css/post-3818c60.css') }}'
@@ -624,13 +623,19 @@
         media='all' />
     <link rel='stylesheet' id='ekit-responsive-css' href='{{ asset('assets/css/responsive7433.css') }}'
         media='all' />
-    <link rel='stylesheet' id='swiper-css' href='https://gajean.com/tkit/eveno/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5' media='all' />
+    <link rel='stylesheet' id='swiper-css'
+        href='https://gajean.com/tkit/eveno/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5'
+        media='all' />
     <link rel='stylesheet' id='google-fonts-1-css'
         href='https://fonts.googleapis.com/css?family=Archivo%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CLibre+Franklin%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&display=auto'
         media='all' />
 
-<link rel='stylesheet' id='widget-image-carousel-css' href='https://gajean.com/tkit/eveno/wp-content/plugins/elementor/assets/css/widget-image-carousel.min.css' media='all' />
-<link rel='stylesheet' id='e-swiper-css' href='https://gajean.com/tkit/eveno/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css' media='all' />
+    <link rel='stylesheet' id='widget-image-carousel-css'
+        href='https://gajean.com/tkit/eveno/wp-content/plugins/elementor/assets/css/widget-image-carousel.min.css'
+        media='all' />
+    <link rel='stylesheet' id='e-swiper-css'
+        href='https://gajean.com/tkit/eveno/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css'
+        media='all' />
     <link rel='stylesheet' id='elementor-icons-ekiticons-css' href='{{ asset('assets/css/ekiticons7433.css') }}'
         media='all' />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -659,9 +664,34 @@
                 background-image: none !important;
             }
         }
+
+        .scrolled{
+            position: fixed !important;
+            left: 0;
+            top: 0;
+            box-shadow: 0px 0px 0.1px 0.2px #7a7575;
+        }
+
+        .elementor-377 .elementor-element.elementor-element-3b762e9 .elementskit-menu-container {
+            height: 60px !important;
+        }
     </style>
     <!-- Production version -->
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('.elementor-element-6149115');
+
+            if (window.scrollY > 50) {
+                console.log('scroll class added.');
+                header.classList.add('scrolled');
+            } else {
+                console.log('scroll class removed.');
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 </head>
 
 <body
@@ -760,25 +790,26 @@
                     </div>
                     <div class="elementor-element elementor-element-6149115 e-con-full e-flex e-con e-child"
                         data-id="6149115" data-element_type="container"
-                        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}"
+                        style="position: relative;height: 60px; ">
                         <div class="elementor-element elementor-element-d992bd8 e-con-full e-flex e-con e-child"
-                            data-id="d992bd8" data-element_type="container">
+                            data-id="d992bd8" data-element_type="container" style="width: 100%; margin-right: 10%;">
                             <div class="elementor-element elementor-element-ae6dc22 elementor-widget__width-initial elementor-widget elementor-widget-image"
-                                data-id="ae6dc22" data-element_type="widget" data-widget_type="image.default">
+                                data-id="ae6dc22" data-element_type="widget" data-widget_type="image.default" style="width: 20%;">
                                 <div class="elementor-widget-container">
-                                    <img fetchpriority="high" width="486" height="105"
+                                    <img fetchpriority="high" width="250" height="105"
                                         src="assets/asset-contents/uploads/sites/2/2024/02/Eveno-Light.png"
                                         class="attachment-large size-large wp-image-21" alt=""
                                         srcset="https://gajean.com/tkit/eveno/wp-content/uploads/sites/2/2024/02/Eveno-Light.png 486w, https://gajean.com/tkit/eveno/wp-content/uploads/sites/2/2024/02/Eveno-Light-300x65.png 300w"
-                                        sizes="(max-width: 486px) 100vw, 486px" />
+                                        sizes="(max-width: 240px) 100vw, 486px" />
                                 </div>
                             </div>
-                            <div class="elementor-element elementor-element-3b762e9 elementor-widget-tablet__width-initial elementor-widget elementor-widget-ekit-nav-menu"
+                            <div style="width:auto !important;" class="elementor-element elementor-element-3b762e9 elementor-widget-tablet__width-initial elementor-widget elementor-widget-ekit-nav-menu"
                                 data-id="3b762e9" data-element_type="widget"
-                                data-widget_type="ekit-nav-menu.default">
-                                <div class="elementor-widget-container">
+                                data-widget_type="ekit-nav-menu.default" style="">
+                                <div class="elementor-widget-container" >
                                     <nav class="ekit-wid-con ekit_menu_responsive_tablet" data-hamburger-icon=""
-                                        data-hamburger-icon-type="icon" data-responsive-breakpoint="1024">
+                                        data-hamburger-icon-type="icon" data-responsive-breakpoint="1024" style="width: 100%;">
                                         <button class="elementskit-menu-hamburger elementskit-menu-toggler"
                                             type="button" aria-label="hamburger-icon">
                                             <span class="elementskit-menu-hamburger-icon"></span><span
@@ -791,49 +822,85 @@
                                                 class="elementskit-navbar-nav elementskit-menu-po-center submenu-click-on-icon">
                                                 <li id="menu-item-73"
                                                     class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-73 nav-item elementskit-mobile-builder-content active"
-                                                    data-vertical-menu=750px><a href="{{url('/')}}"
+                                                    data-vertical-menu=550px><a href="{{ url('/') }}"
                                                         class="ekit-menu-nav-link active">Home</a></li>
                                                 <li id="menu-item-74"
                                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-74 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
-                                                    data-vertical-menu=750px><a href="#"
+                                                    data-vertical-menu=550px><a href="#"
                                                         class="ekit-menu-nav-link ekit-menu-dropdown-toggle">About
-                                                        <svg style="margin-left:10px; margin-bottom: 2px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-plus-icon lucide-circle-plus"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg></a>
+                                                        <svg style="margin-left:10px; margin-bottom: 2px;"
+                                                            xmlns="http://www.w3.org/2000/svg" width="24"
+                                                            height="24" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="lucide lucide-circle-plus-icon lucide-circle-plus">
+                                                            <circle cx="12" cy="12" r="10" />
+                                                            <path d="M8 12h8" />
+                                                            <path d="M12 8v8" />
+                                                        </svg></a>
                                                     <ul class="elementskit-dropdown elementskit-submenu-panel">
                                                         <li id="menu-item-75"
                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75 nav-item elementskit-mobile-builder-content"
-                                                            data-vertical-menu=750px><a href="{{url('/about')}}"
+                                                            data-vertical-menu=550px><a href="{{ url('/about') }}"
                                                                 class=" dropdown-item">About Us</a>
                                                         <li id="menu-item-76"
                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-76 nav-item elementskit-mobile-builder-content"
-                                                            data-vertical-menu=750px><a href="{{url('/ourteam')}}"
+                                                            data-vertical-menu=550px><a href="{{ url('/ourteam') }}"
                                                                 class=" dropdown-item">Our Team</a>
                                                     </ul>
                                                 </li>
                                                 <li id="menu-item-77"
                                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-77 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
-                                                    data-vertical-menu=750px><a href="/services"
-                                                        class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Services<svg style="margin-left:10px; margin-bottom: 2px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-plus-icon lucide-circle-plus"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg></a></a>
+                                                    data-vertical-menu=550px><a href="/services"
+                                                        class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Services<svg
+                                                            style="margin-left:10px; margin-bottom: 2px;"
+                                                            xmlns="http://www.w3.org/2000/svg" width="24"
+                                                            height="24" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="lucide lucide-circle-plus-icon lucide-circle-plus">
+                                                            <circle cx="12" cy="12" r="10" />
+                                                            <path d="M8 12h8" />
+                                                            <path d="M12 8v8" />
+                                                        </svg></a></a>
                                                     <ul class="elementskit-dropdown elementskit-submenu-panel">
- <li id="menu-item-78" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-78 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="{{url('/services')}}" class=" dropdown-item">Our Services</a>
-  <li id="menu-item-79" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-79 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="../detail-service" class=" dropdown-item">Detail Service</a>
-   {{-- <li id="menu-item-80" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="../our-pricing/index.html" class=" dropdown-item">Our Pricing</a></ul> --}}
-   </ul>
+                                                        <li id="menu-item-78"
+                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-78 nav-item elementskit-mobile-builder-content"
+                                                            data-vertical-menu=550px><a href="{{ url('/services') }}"
+                                                                class=" dropdown-item">Our Services</a>
+                                                        <li id="menu-item-79"
+                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-79 nav-item elementskit-mobile-builder-content"
+                                                            data-vertical-menu=550px><a href="../detail-service"
+                                                                class=" dropdown-item">Detail Service</a>
+                                                            {{-- <li id="menu-item-80" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80 nav-item elementskit-mobile-builder-content" data-vertical-menu=550px><a href="../our-pricing/index.html" class=" dropdown-item">Our Pricing</a></ul> --}}
+                                                    </ul>
+
                                                 <li id="menu-item-81"
                                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-81 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
-                                                    data-vertical-menu=750px><a href="#"
-                                                        class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Projects<svg style="margin-left:10px; margin-bottom: 2px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-plus-icon lucide-circle-plus"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg></a></a>
-                                                    <ul class="elementskit-dropdown elementskit-submenu-panel">
- <li id="menu-item-89" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-89 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="{{url('/projects')}}" class=" dropdown-item">Our Projects</a>
-    <li id="menu-item-82" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="../detail-project/index.html" class=" dropdown-item">Detail Project</a></ul>
+                                                    data-vertical-menu=550px><a href="{{ url('/portfolio') }}"
+                                                        class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Portfolio</a>
                                                 </li>
-                                                {{-- <li id="menu-item-83" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-83 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu=750px><a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Pages<i aria-hidden="true" class="icon icon-plus elementskit-submenu-indicator"></i></a>
-<ul class="elementskit-dropdown elementskit-submenu-panel">
- <li id="menu-item-84" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-84 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="../contact-us/index.html" class=" dropdown-item">Contact Us</a>	<li id="menu-item-85" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-85 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="../faqs/index.html" class=" dropdown-item">FAQs</a>	<li id="menu-item-740" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-740 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="../reviews/index.html" class=" dropdown-item">Reviews</a>	<li id="menu-item-86" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-86 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="../404/index.html" class=" dropdown-item">404</a>	<li id="menu-item-87" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="../our-blog/index.html" class=" dropdown-item">Our Blog</a>	<li id="menu-item-88" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-88 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="../single-blog/index.html" class=" dropdown-item">Single Blog</a></ul>
-</li> --}}
+                                                <li id="menu-item-82"
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-81 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
+                                                    data-vertical-menu=550px><a href="{{ url('/testimonial') }}"
+                                                        class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Testimonials</a>
+                                                </li>
+                                                <li id="menu-item-83"
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-81 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
+                                                    data-vertical-menu=550px><a href="{{ url('/contact') }}"
+                                                        class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Contact</a>
+                                                </li>
+
+                                                <li id="menu-item-84"
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-81 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
+                                                    data-vertical-menu=550px><a href="{{ url('/projects') }}"
+                                                        class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Projects</a>
+                                                </li>
+
                                             </ul>
-                                            <div class="elementskit-nav-identity-panel"><a
-                                                    class="elementskit-nav-logo" href="#"
-                                                    target="" rel=""><img
+                                            <div class="elementskit-nav-identity-panel"
+                                                style="position: absolute; right: 5;"><a class="elementskit-nav-logo"
+                                                    href="#" target="" rel=""><img
                                                         src="assets/asset-contents/uploads/sites/2/2024/02/Eveno-Light.png"
                                                         title="Eveno Light" alt="Eveno Light"
                                                         decoding="async" /></a><button
@@ -848,7 +915,7 @@
                             </div>
                         </div>
                         <div class="elementor-element elementor-element-aa6c367 e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-child"
-                            data-id="aa6c367" data-element_type="container">
+                            data-id="aa6c367" data-element_type="container" style="width: auto !important; position: absolute; right: 20px; top: 12px;">
                             {{--
                             <div class="elementor-element elementor-element-8825bc3 elementor-widget__width-auto elementor-tablet-align-justify elementor-widget-tablet__width-inherit elementor-widget elementor-widget-button"
                                 data-id="8825bc3" data-element_type="widget" data-widget_type="button.default">
@@ -871,7 +938,15 @@
                                     <div class="ekit-wid-con">
                                         <div class="ekit-offcanvas-toggle-wraper before">
                                             <a href="#" class="ekit_navSidebar-button ekit_offcanvas-sidebar"
-                                                aria-label="offcanvas-menu"><svg style="margin-top: 2px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 12h16"/><path d="M4 18h16"/><path d="M4 6h16"/></svg> </a>
+                                                aria-label="offcanvas-menu"><svg style="margin-top: 2px;"
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-menu-icon lucide-menu">
+                                                    <path d="M4 12h16" />
+                                                    <path d="M4 18h16" />
+                                                    <path d="M4 6h16" />
+                                                </svg> </a>
                                         </div>
                                         <!-- offset cart strart -->
                                         <!-- sidebar cart item -->

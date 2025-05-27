@@ -22,15 +22,13 @@
 							data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}"
 							data-widget_type="heading.default">
 							<div class="elementor-widget-container">
-								<h3 class="elementor-heading-title elementor-size-default">Step into a world where every
-									event is a masterpiece.</h3>
+								<h3 class="elementor-heading-title elementor-size-default">Your Vision. Our Expertise. Unforgettable Events.</h3>
 							</div>
 						</div>
 						<div class="elementor-element elementor-element-913f66e elementor-widget elementor-widget-text-editor"
 							data-id="913f66e" data-element_type="widget" data-widget_type="text-editor.default">
 							<div class="elementor-widget-container">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
-									ullamcorper mattis, pulvinar dapibus leo.</p>
+								<p>From corporate conferences to weddings and private parties, we plan, design, and execute events that leave a lasting impression.p>
 							</div>
 						</div>
 					</div>
@@ -43,7 +41,7 @@
 									<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-float"
 										href="#">
 										<span class="elementor-button-content-wrapper">
-											<span class="elementor-button-text">Our Services</span>
+											<span class="elementor-button-text"><i data-lucide="calender" class="w-5 h-5"></i> Let’s Start Planning</span>
 										</span>
 									</a>
 								</div>
@@ -56,7 +54,7 @@
 									<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-float"
 										href="#">
 										<span class="elementor-button-content-wrapper">
-											<span class="elementor-button-text">See Projects</span>
+											<span class="elementor-button-text"><i data-lucide="phone" class="w-5 h-5"></i> Book a Free Consultation</span>
 										</span>
 									</a>
 								</div>
