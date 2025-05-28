@@ -29,7 +29,7 @@
             padding: 1.5rem;
             border-radius: 0.5rem;
             width: 100%;
-            max-width: 500px;
+            max-width: 700px;
         }
     </style>
 </head>

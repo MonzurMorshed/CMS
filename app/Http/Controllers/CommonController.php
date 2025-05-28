@@ -3,43 +3,41 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\Interface\CommonRepositoryInterface;
+use App\Repositories\ValidationRepository;
 
 use Illuminate\Http\Request;
 
 class CommonController extends Controller
 {
     public $common;
+    public $validation;
 
-    public function __construct(CommonRepositoryInterface $common) {
+    public function __construct(CommonRepositoryInterface $common, ValidationRepository $validation) {
         $this->common = $common;
-    }
-
-    function sanitizeToLowerAlphaOnly($string) {
-        // Remove all non-alphabetic characters
-        $onlyLetters = preg_replace('/[^a-zA-Z]/', '', $string);
-        // Convert to lowercase
-        return strtolower($onlyLetters);
+        $this->validation = $validation;
     }
 
     public function index($model) {
         $data = $this->common->all($model);
         $heading = $model;
-        $viewmodel = $this->sanitizeToLowerAlphaOnly($model);
+        $viewmodel = sanitizeToLowerAlphaOnly($model);
         return view("cms-admin.$viewmodel.index", compact('data','heading'));
     }
 
     public function store(Request $request,$model){
-        // $data = $request->validate([
-        //     'name' => 'required',
-        //     'designation' => 'required'
-        // ]);
-        $commonData = $this->common->create($data,$model);
+
+        $input = $request->except('_token');
+        $viewmodel = sanitizeToLowerAlphaOnly($model);
+        $validated = $this->validation->validate(ucfirst($request->model), $input);
+        $attachmentData = fileUpload($input, $model);
+        $input = array_merge($input, $attachmentData);
+        $commonData = $this->common->create($input,$model);
         return response()->json($commonData, 201);
     }
 
     public function show($id,$model) {
         $data = $this->common->find($id,$model);
-        $viewmodel = $this->sanitizeToLowerAlphaOnly($modal);
+        $viewmodel = sanitizeToLowerAlphaOnly($modal);
         // return response()->json($data, 200);
         return view("'.$viewmodel.'details",$data);
     }
